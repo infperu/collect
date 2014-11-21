@@ -725,6 +725,15 @@ public class UIOptions implements ApplicationOptions, Serializable {
 		setAnnotationValue(defn, Annotation.LABEL_ORIENTATION, value);
 	}
 	
+	public String getLabelColor(NodeDefinition defn) {
+		return getAnnotationStringValue(defn, Annotation.LABEL_COLOR );
+	}
+	
+	public void setLabelColor(NodeDefinition defn, String value) {
+		setAnnotationValue(defn, Annotation.LABEL_ORIENTATION, value);
+	}
+	
+	
 	private boolean getAnnotationBooleanValue(NodeDefinition defn, Annotation annotation) {
 		String annotationValue = defn.getAnnotation(annotation.getQName());
 		if ( StringUtils.isBlank(annotationValue) ) {

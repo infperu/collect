@@ -49,8 +49,8 @@ public class CollectAnnotations {
 		CODE_ATTRIBUTE_SHOW_CODE(new QName(UI_NAMESPACE_URI, UIOptionsConstants.SHOW_CODE), true),
 		WIDTH(new QName(UI_NAMESPACE_URI, UIOptionsConstants.WIDTH)),
 		LABEL_WIDTH(new QName(UI_NAMESPACE_URI, UIOptionsConstants.LABEL_WIDTH)),
-		LABEL_ORIENTATION(new QName(UI_NAMESPACE_URI, UIOptionsConstants.LABEL_ORIENTATION), Orientation.HORIZONTAL)
-		;
+		LABEL_ORIENTATION(new QName(UI_NAMESPACE_URI, UIOptionsConstants.LABEL_ORIENTATION), Orientation.HORIZONTAL),
+		LABEL_COLOR(new QName(UI_NAMESPACE_URI, UIOptionsConstants.LABEL_COLOR), "#000000");
 		
 		private QName qName;
 		private Object defaultValue;

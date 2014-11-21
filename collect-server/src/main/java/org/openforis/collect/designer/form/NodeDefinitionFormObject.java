@@ -47,6 +47,7 @@ public abstract class NodeDefinitionFormObject<T extends NodeDefinition> extends
 	private String paperPromptLabel;
 	private String handheldPromptLabel;
 	private String pcPromptLabel;
+	
 	//layout
 	private String tabName;
 	private int column;
@@ -54,6 +55,7 @@ public abstract class NodeDefinitionFormObject<T extends NodeDefinition> extends
 	private Integer width;
 	private Integer labelWidth;
 	private String labelOrientation;
+	private String labelColor;
 	
 	NodeDefinitionFormObject(EntityDefinition parentDefn) {
 		this.parentDefinition = parentDefn;
@@ -147,6 +149,7 @@ public abstract class NodeDefinitionFormObject<T extends NodeDefinition> extends
 		width = uiOptions.getWidth(source);
 		labelWidth = uiOptions.getLabelWidth(source);
 		labelOrientation = uiOptions.getLabelOrientation(source).name();
+		labelColor = uiOptions.getLabelColor(source);
 
 		CollectAnnotations annotations = survey.getAnnotations();
 
@@ -198,6 +201,7 @@ public abstract class NodeDefinitionFormObject<T extends NodeDefinition> extends
 		uiOptions.setWidth(dest, width);
 		uiOptions.setLabelWidth(dest, labelWidth);
 		uiOptions.setLabelOrientation(dest, Orientation.valueOf(labelOrientation));
+		uiOptions.setLabelColor(dest, labelColor);
 		
 		if ( dest instanceof Calculable ) {
 			((Calculable) dest).setCalculated(calculated);

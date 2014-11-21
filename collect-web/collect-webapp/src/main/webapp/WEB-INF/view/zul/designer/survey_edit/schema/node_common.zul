@@ -441,6 +441,15 @@
 									value="VERTICAL" />
 							</radiogroup>
 		  				</fieldErrorHandler>
+		  				<fieldErrorHandler message="@load(vmsgs['labelColor'])">
+		  					<label value="${labels.survey.schema.node.layout.label_color}:" />
+		  				</fieldErrorHandler>
+		  				<fieldErrorHandler message="@load(vmsgs['labelColor'])">
+		  				
+		  					<colorbox value="@bind(fx.labelColor)" onChange="@command('applyChanges')" 		  					
+		  					width="30px" height="25px" />
+		  					
+		  				</fieldErrorHandler>
 		  			</row>
     			</rows>
     		</grid>
